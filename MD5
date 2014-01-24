@@ -1,6 +1,6 @@
 d2520e0dc0a038fcfdd38d65ee9ca9a1 *ChangeLog
-56e5e37a68973c4c893ce792468ea5ad *DESCRIPTION
-012592abf4b40a8d741b299df2ded05a *NAMESPACE
+2a6df4601e3db1d47fe910a4b521393e *DESCRIPTION
+1d27aba1bf8acfb6379487adfb951105 *NAMESPACE
 dbe12fa54e19ccf09a41241d02f69318 *R/auto.shading.R
 8d4d2ee59fca1636a4fd08ecb181a115 *R/choro.legend.R
 41500b26259173edaf7538af669c1deb *R/choropleth.R
@@ -22,12 +22,12 @@ caeb2f8cdc30ffeeec23fddd0568bdd0 *data/newhaven2.rda
 c4f224d3401e51ce6fecc5b80e492e7f *data/phenology.RData
 27433df4bb571522004c57c858e4d91a *data/tornados.RData
 0447d6d6096cdee8c9b9d7551cceafea *data/vulgaris.RData
-712c61445504297006dd20ea5bc0c880 *man/GISTools-package.Rd
+3b1dde97ff50ee081a1f3b4d63d84616 *man/GISTools-package.Rd
 f8697d8a4797bd911ad219b711a7a146 *man/add.alpha.Rd
 8bda56612bf4da6fd647c988b067e858 *man/add.masking.Rd
-4ac5eb391b51afbb3f18c3714910995c *man/auto.shading.Rd
-bf9ddeff9f1f58463c7b8eb0ece8948a *man/choro.legend.Rd
-3ec6830b8a8a1bf12c1c5fb3a638d3d8 *man/choropleth.Rd
+2bed996cfc83844b70bc80a5d74b6f50 *man/auto.shading.Rd
+fe297e0bf00aa405ffe4e7878f35597b *man/choro.legend.Rd
+df60e4c458ee6714dc284446874ddde9 *man/choropleth.Rd
 d46252737978b3235e63014b2a22e297 *man/ft2miles.Rd
 6b83ff78a2623ec40e5e67d21dd30cca *man/generalize.polys.Rd
 c6d572f2f13c631735db19ffed1e4658 *man/georgia.Rd
@@ -43,6 +43,6 @@ a52c84f808206b70bfca4e24a01fa223 *man/poly.counts.Rd
 b5eb5544e3286350868eca6d7b5803ca *man/poly.labels.Rd
 521897b255b9a4174ab5573042696d6c *man/poly.outer.Rd
 520cf1c12ff4e8c2a9651c3ae91d57ba *man/quantile.cuts.Rd
-bdbb80e60bb4ae57d6a8d4c10adf85c2 *man/shading.Rd
+67dd838a73161f6f016363cf502a146a *man/shading.Rd
 aed441cea24901288ff2bcde9faf0465 *man/tornados.Rd
 ba0e66b15aa7fbac8695cc295ce692bb *man/vulgaris.Rd

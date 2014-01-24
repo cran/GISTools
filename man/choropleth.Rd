@@ -24,12 +24,9 @@ None (see above).
 \author{Chris Brunsdon}
 \seealso{\code{\link{choro.legend}}, \code{\link{auto.shading}}, \code{\link{shading}}.}
 \examples{
-# Open a new graphics window - default is not a nice shape for a US map
-if (.Platform$GUI == "AQUA") {
-  quartz(w=10,h=8) } else  {
-  x11(w=10,h=8) }
 # Read in map data and compute a rate for mapping
-sids <- readShapePoly(system.file("shapes/sids.shp", package="maptools")[1], proj4string=CRS("+proj=longlat +ellps=clrk66"))
+sids <- readShapePoly(system.file("shapes/sids.shp", package="maptools")[1], 
+	proj4string=CRS("+proj=longlat +ellps=clrk66"))
 sids.rate=10000*sids$SID74/sids$BIR74
 # Create the shading scheme,  plot a choropleth map 
 shades = auto.shading(sids.rate,cols=brewer.pal(5,'Blues'))

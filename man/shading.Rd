@@ -20,12 +20,9 @@ An object of class \code{shading}.
 \section{Warning}{At the moment,  the it is assumed that the number of shading colours is one more than the break points,  but this is not checked.}
 \seealso{ \code{\link{choropleth}},\code{\link{choro.legend}} }
 \examples{
-# Open a new graphics window - default is not a nice shape for a US map
-if (.Platform$GUI == "AQUA") {
-  quartz(w=10,h=8) } else  {
-  x11(w=10,h=8) }
 # Read in map data and compute a rate for mapping
-sids <- readShapePoly(system.file("shapes/sids.shp", package="maptools")[1], proj4string=CRS("+proj=longlat +ellps=clrk66"))
+sids <- readShapePoly(system.file("shapes/sids.shp", package="maptools")[1], 
+	proj4string=CRS("+proj=longlat +ellps=clrk66"))
 sids.rate=10000*sids@data[,10]/sids@data[,9]
 shades = shading(breaks=c(15,30,45,60,75),cols=brewer.pal(6,'YlGn'))
 choropleth(sids,sids.rate,shades)
