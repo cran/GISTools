@@ -1,6 +1,6 @@
 d2520e0dc0a038fcfdd38d65ee9ca9a1 *ChangeLog
-2a6df4601e3db1d47fe910a4b521393e *DESCRIPTION
-1d27aba1bf8acfb6379487adfb951105 *NAMESPACE
+b4b8e0a1037356b34c14a9bb4ee1e3be *DESCRIPTION
+ac7e256f6075ed1236581766f6bbc068 *NAMESPACE
 dbe12fa54e19ccf09a41241d02f69318 *R/auto.shading.R
 8d4d2ee59fca1636a4fd08ecb181a115 *R/choro.legend.R
 41500b26259173edaf7538af669c1deb *R/choropleth.R
@@ -14,8 +14,8 @@ fa32c74392d567cc57a6cdb0480aa6ab *R/range.cuts.R
 1dd3c0fae71d7ed56f4553a00f9b123a *R/sd.cuts.R
 906c5a02469ae16dce8a41637eb3ffc1 *R/shading.R
 82ed145736734af6baac4c1b4797ff30 *R/spkde.R
-e6eb7ee2732c3d8d6af0e20fdaedbb67 *data/datalist
-781b2035d843f4a9b5a4014acceea5b7 *data/georgia.RData
+1d553bfbb21338f04b7b8c8c3c7bc4ff *data/datalist
+355212ced5b8e91d99a81d4a304a53a6 *data/georgia.RData
 def345bb4132f2f61f654249ef1b9671 *data/newhaven.old.rda
 ae28979f136d891756d4ee04cd2c6f2e *data/newhaven.rda
 caeb2f8cdc30ffeeec23fddd0568bdd0 *data/newhaven2.rda
@@ -30,7 +30,7 @@ fe297e0bf00aa405ffe4e7878f35597b *man/choro.legend.Rd
 df60e4c458ee6714dc284446874ddde9 *man/choropleth.Rd
 d46252737978b3235e63014b2a22e297 *man/ft2miles.Rd
 6b83ff78a2623ec40e5e67d21dd30cca *man/generalize.polys.Rd
-c6d572f2f13c631735db19ffed1e4658 *man/georgia.Rd
+5add8c8163da44f52175deea74632698 *man/georgia.Rd
 074c586301d45d8628a635b48f6bfc86 *man/jitter.points.Rd
 3ac1676ba07f63ea90761c99a5c18dae *man/kde.polys.Rd
 66420d47bc729eecf03491d834d5e3d7 *man/level.plot.Rd

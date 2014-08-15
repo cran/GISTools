@@ -1,2 +1,2 @@
 exportPattern("^[^\\.]")
-import(rgeos,MASS,RColorBrewer,maptools)
+import(rgeos,MASS,RColorBrewer,maptools,sp)
