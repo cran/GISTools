@@ -1,8 +1,8 @@
 d2520e0dc0a038fcfdd38d65ee9ca9a1 *ChangeLog
-b4b8e0a1037356b34c14a9bb4ee1e3be *DESCRIPTION
+e16ebdc7976af64840e7595041e05d91 *DESCRIPTION
 ac7e256f6075ed1236581766f6bbc068 *NAMESPACE
 dbe12fa54e19ccf09a41241d02f69318 *R/auto.shading.R
-8d4d2ee59fca1636a4fd08ecb181a115 *R/choro.legend.R
+83503c10f95377ed7c7f3efbc9237925 *R/choro.legend.R
 41500b26259173edaf7538af669c1deb *R/choropleth.R
 8d34cce71d0fef0689224f9654eb5f7c *R/ft2miles.R
 4d7a5098538a43cc2e53eb1dfc71c9b4 *R/gwrhelp.R
@@ -26,7 +26,7 @@ c4f224d3401e51ce6fecc5b80e492e7f *data/phenology.RData
 f8697d8a4797bd911ad219b711a7a146 *man/add.alpha.Rd
 8bda56612bf4da6fd647c988b067e858 *man/add.masking.Rd
 2bed996cfc83844b70bc80a5d74b6f50 *man/auto.shading.Rd
-fe297e0bf00aa405ffe4e7878f35597b *man/choro.legend.Rd
+3ac7c8e76a183878164cc39c377271be *man/choro.legend.Rd
 df60e4c458ee6714dc284446874ddde9 *man/choropleth.Rd
 d46252737978b3235e63014b2a22e297 *man/ft2miles.Rd
 6b83ff78a2623ec40e5e67d21dd30cca *man/generalize.polys.Rd
