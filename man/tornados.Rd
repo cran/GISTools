@@ -9,9 +9,7 @@
 \description{ Data set from NOAA's National Weather Service Indianapolis, IN Weather Forecast Office 6900 W. Hanna Ave.}
 
 \usage{ 
-data(tornados)
-torn
-torn2 }
+data(tornados)}
 
 
 %- maybe also 'usage' for other objects documented here.
@@ -28,11 +26,12 @@ torn2 }
 # Read in the data
 data(tornados)
 # Split the plot in two
-par(mfrow=c(2,1))
+opar <- par(mfrow=c(2,1))
 # Plot US states
 plot(us_states)
 # Add Locations of observation stations
 plot(torn,add=TRUE,pch=16,col='red')
 # Plot a histogram of year of observation next to this
 hist(torn$YEAR)
+par(opar)
 }

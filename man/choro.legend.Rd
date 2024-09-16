@@ -30,11 +30,15 @@ None (see above)
 \seealso{\code{\link{choropleth}}, \code{\link{auto.shading}}, \code{\link{shading}}. }
 \examples{
 # Read in map data and compute a rate for mapping
-sids <- readShapePoly(system.file("shapes/sids.shp", package="maptools")[1], 
-	proj4string=CRS("+proj=longlat +ellps=clrk66"))
-sids.rate=10000*sids@data[,10]/sids@data[,9]
-# Create the shading scheme,  plot a choropleth map and add a legend
-shades = auto.shading(sids.rate)
-choropleth(sids,sids.rate,shades)
-choro.legend(-83.77,37.87,shades,fmt="\%4.1f",cex=0.8,title='Rate per 10,000')
+# Try the sf class
+data(WHData)
+shades = auto.shading(WHHP[["Avg_HP_avg"]],n=7)
+dev.new(width = 16, height = 12)
+choropleth(sp = WHHP,v="Avg_HP_avg",shading=shades)
+choro.legend(548871.4, 3377000, shades,title='Average house price')
+#Try the Spatial object
+shades = auto.shading(whp_sp@data[["Avg_HP_avg"]],n=6)
+dev.new(width = 16, height = 12)
+choropleth(sp = whp_sp,v="Avg_HP_avg",shading=shades)
+choro.legend(548871.4, 3377000,  shades,title='Average house price')
 }

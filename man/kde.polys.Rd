@@ -9,7 +9,7 @@ kde.points(pts,h,n=200,lims=NULL)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{pts}{A \code{SpatialPoints} or \code{SpatialPointsDataFrame} object.}
+  \item{pts}{A \code{SpatialPoints} or \code{SpatialPointsDataFrame} object or \code{sf} - POINT object.}
   \item{h}{A real number - the bandwidth of the KDE}
   \item{n}{An integer,  the output grid density - ie result is nxn grid}
   \item{lims}{A spatial object - the KDE grid will cover this,  if provided}
@@ -18,9 +18,10 @@ kde.points(pts,h,n=200,lims=NULL)
  A \code{SpatialPixelsDataFrame} containing the KDE.
 }
 
-\author{Chris Brunsdon}
+\author{Chris Brunsdon, Binbin Lu}
 
 \examples{
+  \donttest{
 # Data for New Haven to use in example
 data(newhaven)
 # Do the KDE
@@ -31,6 +32,7 @@ level.plot(breach.dens)
 masker = poly.outer(breach.dens,tracts,extend=100); add.masking(masker)
 # Plot census tract boundaries
 plot(tracts,add=TRUE)
+  }
 }
 
 

@@ -9,13 +9,13 @@ poly.areas(polys)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{polys}{A \code{SpatialPolygons} or \code{SpatialPolygonsDataFrame} object.}
+  \item{polys}{A \code{SpatialPolygons} or \code{SpatialPolygonsDataFrame} or \code{sf} -POLYGON or - MULTIPOLYGON object.}
 }
 \value{
  A list of areas of the same length as the number of polygons in \code{polys}.
 }
 
-\author{Chris Brunsdon}
+\author{Chris Brunsdon, Binbin Lu}
 
 \examples{
 # Data for New Haven to use in example

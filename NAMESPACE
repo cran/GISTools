@@ -1,2 +1,14 @@
-exportPattern("^[^\\.]")
-import(rgeos,MASS,RColorBrewer,maptools,sp)
+import(MASS)
+import(sf)
+import(RColorBrewer)
+import(sp)
+importFrom("grDevices", "dev.new")
+importFrom("graphics", ".filled.contour", "hist", "layout", "legend",
+             "lines", "par", "polygon", "rect", "strheight", "strwidth",
+             "text", "title")
+importFrom("stats", "quantile", "rnorm", "sd")
+importFrom("methods", "as", "is", "slot")
+export(auto.shading, poly.outer, add.masking, choro.legend, choropleth, ft2miles,miles2ft,ft2km,
+	km2ft, add.alpha,jitter.points, bstrap.points, poly.labels, map.scale, north.arrow, poly.counts,
+	poly.areas, generalize.polys, quantileCuts, rangeCuts, sdCuts, shading, kde.points, level.plot,
+	thematic.map, miles2ft)

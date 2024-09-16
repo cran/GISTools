@@ -12,7 +12,7 @@ add.masking(maskPoly,color)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{maskPoly}{A masking polygon as described above.}
+  \item{maskPoly}{A masking polygon of a \dQuote{Spatial} or \dQuote{sf} class as described above.}
   \item{color}{Colour of the mask.  Defaults to white,  but for example,  sea could be shown as blue.}
 }
 \value{None}
@@ -22,9 +22,10 @@ Returns no value,  but draws a mask on the current graphics device as a side eff
 
 \seealso{\code{\link{poly.outer}}, \code{\link{kde.points}}. }
 
-\author{Chris Brunsdon}
+\author{Chris Brunsdon, Binbin Lu}
 
 \examples{
+  \donttest{
 # Data for New Haven to use in example
 data(newhaven)
 # Do the KDE
@@ -33,8 +34,8 @@ breach.dens = kde.points(breach,lims=tracts)
 level.plot(breach.dens)
 # Block out the part outside the study area
 masker = poly.outer(breach.dens,tracts,extend=100); add.masking(masker)
-# Plot census tract boundaries
-plot(tracts,add=TRUE)
+add.masking(masker,"blue")
+  }
 }
 
 

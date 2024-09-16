@@ -1,4 +1,7 @@
-`choro.legend` <- function (px, py, sh, under = "under", over = "over", between = "to", 
+
+#Original code by Chris Brunsdon
+#Edited by Binbin Lu
+choro.legend <- function (px, py, sh, under = "under", over = "over", between = "to", 
                             fmt = "%g", cex=1, ...) 
   {
     x = sh$breaks

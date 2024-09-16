@@ -20,7 +20,7 @@ add.alpha(hex.color.list,alpha)
 \author{Chris Brunsdon}
 \examples{
 # Make a list of semi-transparent RColorBrewer colours,  based on Brewer's Red palette with 5 shades
+require(RColorBrewer)
 add.alpha(brewer.pal(5,'Reds'),0.5)
 }
-
 

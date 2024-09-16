@@ -1,19 +1,47 @@
+#Original code by Chris Brunsdon
+#Edited by Binbin Lu
+
 jitter.points <- function(pts,scl) {
-	x = coordinates(pts)
-	x =  x + rnorm(length(x),0,scl) 
-	res = SpatialPoints(x)
-	proj4string(res)=CRS(proj4string(pts))
-	if (class(pts)=="SpatialPointsDataFrame") {
-		res = SpatialPointsDataFrame(res,data.frame(pts))}
-	return(res) }
+  	spdf <- TRUE
+	if(inherits(pts, "Spatial"))
+	  {
+		x <- coordinates(pts)
+		x <-  x + rnorm(length(x),0,scl) 
+		res <- SpatialPoints(x)
+		proj4string(res) <- CRS(proj4string(pts))
+		spdf <- TRUE 
+  	}   
+  	else
+  	{
+		x <- st_coordinates(pts)
+		x <-  x + rnorm(length(x),0,scl) 
+		res <- x
+  	}
+	if (spdf) {
+		res <- SpatialPointsDataFrame(res,data.frame(pts))}
+	else
+	{
+		pts$geom <- res
+		res <- pts
+	}
+	return(res) 
+}
 
 bstrap.points <- function(pts) {
-	x = coordinates(pts)
+  if(inherits(pts, "Spatial"))
+    x = coordinates(pts)
+  else
+    x = st_coordinates(pts)
 	x = x[sample(nrow(x),replace=TRUE),]
-	res = SpatialPoints(x)
-	proj4string(res)=CRS(proj4string(pts))
-	if (class(pts)=="SpatialPointsDataFrame") {
+	if (inherits(pts, "SpatialPointsDataFrame")) {
+		res = SpatialPoints(x)
+		proj4string(res)=CRS(proj4string(pts))
 		res = SpatialPointsDataFrame(res,data.frame(pts))}
+	else
+	{
+		pts$geom <- st_coordinates(pts)
+		res <- pts
+	}
 	return(res) }
 	
 poly.labels <- function(polys) {

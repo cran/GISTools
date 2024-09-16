@@ -1,17 +1,16 @@
 \name{choropleth}
 \alias{choropleth}
-%- Also NEED an '\alias' for EACH other topic documented here.
 \title{ choropleth}
 \description{
  Draws a choropleth map given a spatialPolygons object,  a variable and a shading scheme.
 }
 \usage{
-choropleth(sp, v, shading = auto.shading(v), ...)
+choropleth(sp, v, shading, ...)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{sp}{ A \code{spatialPolygons} or \code{spatialPolygonsDataFrame} object. }
-  \item{v}{ The variaqble to be mapped.  Must have the same number of elements as \code{s} has polygons.}
+  \item{sp}{ A \code{SpatialPolygonsDataFrame} or \code{sf} -POLYGON or - MULTIPOLYGON object. }
+  \item{v}{ The variable name to be mapped and must included in the data.}
   \item{shading}{ A shading scheme created by \code{shading} or \code{auto.shading}.}
   \item{\dots}{Additional parameters to be passed on to the \code{plot} method for \code{sp}.}
 }
@@ -21,14 +20,19 @@ The function returns no value,  but draws a choropleth map on the current graphi
 \value{
 None (see above).
 }
-\author{Chris Brunsdon}
+\author{Chris Brunsdon, Binbin Lu}
 \seealso{\code{\link{choro.legend}}, \code{\link{auto.shading}}, \code{\link{shading}}.}
 \examples{
 # Read in map data and compute a rate for mapping
-sids <- readShapePoly(system.file("shapes/sids.shp", package="maptools")[1], 
-	proj4string=CRS("+proj=longlat +ellps=clrk66"))
-sids.rate=10000*sids$SID74/sids$BIR74
-# Create the shading scheme,  plot a choropleth map 
-shades = auto.shading(sids.rate,cols=brewer.pal(5,'Blues'))
-choropleth(sids,sids.rate,shades)
+# Try the sf class
+data(WHData)
+shades = auto.shading(WHHP[["Avg_HP_avg"]],n=7)
+dev.new(width = 16, height = 12)
+choropleth(sp = WHHP,v="Avg_HP_avg",shading=shades)
+choro.legend(548871.4, 3377000, shades,title='Average house price')
+#Try the Spatial object
+shades = auto.shading(whp_sp@data[["Avg_HP_avg"]],n=6)
+dev.new(width = 16, height = 12)
+choropleth(sp = whp_sp,v="Avg_HP_avg",shading=shades)
+choro.legend(548871.4, 3377000,  shades,title='Average house price')
 }

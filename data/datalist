@@ -1,7 +1,6 @@
 georgia: georgia georgia.polys georgia2
-newhaven.old: blocks breach places roads
 newhaven: blocks breach burgres.f burgres.n famdisp places roads tracts
-newhaven2: blocks breach burgres.f burgres.n famdisp places roads
 phenology: chinensis chinensis2 us_states us_states2
 tornados: torn torn2 us_states us_states2
 vulgaris: us_states us_states2 vulgaris vulgaris2
+WHData: WHHP whp_sp

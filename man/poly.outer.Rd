@@ -23,9 +23,10 @@ poly.outer(exo.object,input.poly,extend=0)
 \seealso{\code{\link{add.masking}}, \code{\link{kde.points}}. }
 
 
-\author{Chris Brunsdon}
+\author{Chris Brunsdon, Binbin Lu}
 
 \examples{
+  \donttest{
 # Data for New Haven to use in example
 data(newhaven)
 # Do the KDE
@@ -35,7 +36,7 @@ level.plot(breach.dens)
 # Block out the part outside the study area
 masker = poly.outer(breach.dens,tracts,extend=100); add.masking(masker)
 # Plot census tract boundaries
-plot(tracts,add=TRUE)
+plot(tracts,add=TRUE)}
 }
 
 

@@ -14,18 +14,7 @@
 \description{
  Data set from New Haven (CT) crime web site containing point sources of some crimes,  plus roads,  railways and census block spatial data frames.
 }
-\usage{ 
-data(newhaven) 
-blocks
-breach
-famdisp
-burgres.f
-burgres.n
-places
-roads
-tracts}
-
-
+\usage{data(newhaven)}
 %- maybe also 'usage' for other objects documented here.
 \format{
   \itemize{

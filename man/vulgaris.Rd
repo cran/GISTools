@@ -10,10 +10,7 @@
  Data set from Schwartz, M.D. and J.M. Caprio, 2003, North American First Leaf and First Bloom Lilac Phenology Data, IGBP PAGES/World Data Center for Paleoclimatology 
 Data Contribution Series # 2003-078. NOAA/NGDC Paleoclimatology Program, Boulder CO, USA.}
 
-\usage{ data(vulgaris) 
-vulgaris2
-us_states
-us_states2}
+\usage{ data(vulgaris)}
 
 %- maybe also 'usage' for other objects documented here.
 \format{
@@ -31,11 +28,12 @@ us_states2}
 # Read in the data
 data(vulgaris)
 # Split the plot in two
-par(mfrow=c(2,1))
+opar <- par(mfrow=c(2,1))
 # Plot US states
 plot(us_states)
 # Add Locations of observation stations
 plot(vulgaris,add=TRUE,pch=16,col='red')
 # Plot a histogram of year of observation next to this
 hist(vulgaris$Year)
+par(opar)
 }

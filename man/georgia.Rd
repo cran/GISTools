@@ -6,10 +6,7 @@
 \title{Georgia Social and Economic Data by County}
 \description{ Polygon Data Frame as used in the Brunsdon, Fotheringham & Charlton GWR book, with further variable median income (MedInc)}
 
-\usage{ data(georgia) 
-georgia
-georgia2
-}
+\usage{ data(georgia)}
 
 %- maybe also 'usage' for other objects documented here.
 \format{
@@ -24,5 +21,5 @@ georgia2
 # Read in the data
 data(georgia)
 # Make a map of median income
-choropleth(georgia2,georgia2$MedInc)
+choropleth(georgia2,"MedInc")
 }
