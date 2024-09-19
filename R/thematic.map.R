@@ -153,7 +153,7 @@ thematic.map <- function(data, var.names, colorStyle = NULL, na.pos = "bottomrig
       if (sp.df) {
         plot(data, pch = 16, col = colSet, cex = var.norm * 2, lwd= var.norm * 2, xlim = bbox.data[,1], ylim = bbox.data[, 2])
       } else {
-        plot(st_geometry(data),pch = 16,  col = colSet, cex = var.norm * 2, lwd= var.norm * 2, xlim = bbox.data[,1], ylim = bbox.data[,2])
+        plot(st_geometry(data),pch = 16,  col = colSet, cex = var.norm * 2, xlim = bbox.data[,1], ylim = bbox.data[,2])
       }
     }
     
