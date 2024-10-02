@@ -163,7 +163,10 @@ thematic.map <- function(data, var.names, colorStyle = NULL, na.pos = "bottomrig
     # Draw North Arrow
     x_width <- dataCoordinates$x[2] - dataCoordinates$x[1]
     y_width <- dataCoordinates$y[2] - dataCoordinates$y[1]
-    north_arrow_pos <- switch(tolower(na.pos),
+    if(is.numeric(na.pos))
+       north_arrow_pos <- na.pos
+    else
+       north_arrow_pos <- switch(tolower(na.pos),
                               "topright" = c(max(dataCoordinates$x) - x_width * 0.06, max(dataCoordinates$y) - y_width * 0.06),
                               "topleft" = c(min(dataCoordinates$x) + x_width * 0.06, max(dataCoordinates$y) - y_width * 0.06),
                               "bottomright" = c(max(dataCoordinates$x) - x_width * 0.06, min(dataCoordinates$y) + y_width * 0.06),
@@ -174,7 +177,10 @@ thematic.map <- function(data, var.names, colorStyle = NULL, na.pos = "bottomrig
     }
     
     # Draw Scale Bar
-    scale_bar_pos <- switch(tolower(scaleBar.pos),
+     if(is.numeric(scaleBar.pos))
+       scale_bar_pos <- scaleBar.pos
+    else
+       scale_bar_pos <- switch(tolower(scaleBar.pos),
                             "topright" = c(max(dataCoordinates$x) - x_width * 0.06, max(dataCoordinates$y) + y_width * 0.06),
                             "topleft" = c(min(dataCoordinates$x) + x_width * 0.06, max(dataCoordinates$y) + y_width * 0.06),
                             "bottomright" = c(max(dataCoordinates$x) - x_width * 0.06, min(dataCoordinates$y) + y_width * 0.06),
@@ -197,10 +203,14 @@ thematic.map <- function(data, var.names, colorStyle = NULL, na.pos = "bottomrig
     legend_labels[lx + 1] <- paste("over", sprintf("%g", brk[lx]))
     
     maxwidth <- max(strwidth(legend_labels))
-    legend(tolower(legend.pos), legend = legend_labels, fill = legend_colors, col = legend_colors,
+    if(is.numeric(legend.pos))
+       legend(legend.pos[1],legend.pos[2], legend = legend_labels, fill = legend_colors, col = legend_colors,
+           title = legend, horiz = horiz, text.width = maxwidth, cex = 1, bty = "n",...)
+    else
+       legend(tolower(legend.pos), legend = legend_labels, fill = legend_colors, col = legend_colors,
            title = legend, horiz = horiz, text.width = maxwidth, cex = 1, bty = "n",...)
     # Draw Histogram
-    opar <- par(mar = c(0.5, 6, 0.5, 6))
+    opar <- par(mar = c(2, 6, 0.5, 6))
     on.exit(par(opar))
     hist(var.data, col = legend_colors, breaks = c(min(var.data),brk,max(var.data)),
          main = htitle[mNums], xlab = "", ylab = "")

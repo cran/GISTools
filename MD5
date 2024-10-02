@@ -1,4 +1,4 @@
-5a8a8a2bf1a127a1f9c0bbd8a227f955 *DESCRIPTION
+915f4ba918113cdec5060c850c452fb0 *DESCRIPTION
 5f991c5eaafe84d639574f29d6ff4f55 *NAMESPACE
 5a1126e195f5b04b9ff37d159443f9ce *R/auto.shading.R
 4257e141a932e8df1fda7df850a1a313 *R/choro.legend.R
@@ -12,7 +12,7 @@ a6eeea45f99262bd8119b8f6c2810b70 *R/range.cuts.R
 0e05ec065fb9e7bf268443bdb5154b2b *R/sd.cuts.R
 5392dc6e5690af005445ff1352380560 *R/shading.R
 e4d8af735946d43c84a9654f5d6e0d1c *R/spkde.R
-1f81f0c5c926b2858a5850e61e3af8c1 *R/thematic.map.R
+41b4bef0515bd240454e56308fad4565 *R/thematic.map.R
 bac66ae7548b66d1e98340123e9aad84 *data/WHData.rda
 15e9cbe2124bce774e13a84ae6481f85 *data/datalist
 93f3ad1857585e19ab150dcaa4233829 *data/georgia.rda
@@ -20,7 +20,7 @@ ae28979f136d891756d4ee04cd2c6f2e *data/newhaven.rda
 d775ae5ce4a6d8e9d2da0942b81d20dd *data/phenology.rda
 2cd72fef4b57d90b99997a4d1b21f3b2 *data/tornados.rda
 dd3978f011c6d7a578792b1b135a9602 *data/vulgaris.rda
-ea1745973ea35e919bab287295655113 *man/GISTools-package.Rd
+279ed666451f184c50da3ab9fee3915c *man/GISTools-package.Rd
 74108037d2f61a46a71060acd58877b9 *man/WHData.Rd
 672d6aa2ef683b66bb70e0ecae9195f5 *man/add.alpha.Rd
 8ee0ba8c9e1929e8022bb1d4ec47817c *man/add.masking.Rd
@@ -43,6 +43,6 @@ fafcce4a97999bfb88805896271957d0 *man/map.scale.Rd
 e82e9ed5232af464e91a68834b4f8d1f *man/poly.outer.Rd
 520cf1c12ff4e8c2a9651c3ae91d57ba *man/quantile.cuts.Rd
 dd25256b3a11b83b5849eb22a40dfc91 *man/shading.Rd
-0bf08195e9ebe41f538772a891ad899f *man/thematic.map.Rd
+7d69a635ef74a09c8d267b325f75ff43 *man/thematic.map.Rd
 43fc6f16b9c23538a6933481dba05ab1 *man/tornados.Rd
 02805baea4df8c8a733903441435f1dd *man/vulgaris.Rd
